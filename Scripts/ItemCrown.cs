@@ -3,10 +3,10 @@
 // License:         MIT License (http://www.opensource.org/licenses/mit-license.php)
 // Author:          Kirk.O
 // Created On: 	    12/25/2021, 6:45 PM
-// Last Edit:		1/7/2022, 8:45 PM
-// Version:			1.00
+// Last Edit:		3/31/2022, 10:15 PM
+// Version:			1.01
 // Special Thanks:  Hazelnut, Ralzar, Ninelan, BadLuckBurt, Pango
-// Modifier:		
+// Modifier:	
 
 using DaggerfallWorkshop.Game.Items;
 using DaggerfallWorkshop.Game.Serialization;
@@ -23,7 +23,7 @@ namespace JewelryAdditions
 
         public static int crownType = -1;
 
-        public ItemCrown() : base(ItemGroups.Armor, templateIndex)
+        public ItemCrown() : base(ItemGroups.Jewellery, templateIndex)
         {
             if (crownType >= 0)
                 message = crownType;
@@ -67,12 +67,8 @@ namespace JewelryAdditions
                     break;
             }
 
-            nativeMaterialValue = (int)ArmorMaterialTypes.Silver;
             if (message % 2 == 0)
-            {
                 weightInKg += 0.1f; // Gold
-                nativeMaterialValue = (int)ArmorMaterialTypes.Dwarven;
-            }
 
             if (message > 2)
                 weightInKg += 0.15f; // Add 0.01 weight if jewelry item has a gemstone.
@@ -112,24 +108,9 @@ namespace JewelryAdditions
             return message + offset;
         }
 
-        public override int NativeMaterialValue
-        {
-            get
-            {
-                if (message % 2 == 0)
-                    return (int)ArmorMaterialTypes.Dwarven; // Gold
-                return (int)ArmorMaterialTypes.Silver; // Silver
-            }
-        }
-
         public override EquipSlots GetEquipSlot()
         {
             return EquipSlots.Head;
-        }
-
-        public override int GetMaterialArmorValue()
-        {
-            return 0;
         }
 
         public override int GetEnchantmentPower()

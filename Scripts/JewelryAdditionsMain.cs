@@ -3,8 +3,8 @@
 // License:         MIT License (http://www.opensource.org/licenses/mit-license.php)
 // Author:          Kirk.O
 // Created On: 	    12/25/2021, 6:45 PM
-// Last Edit:		1/7/2022, 8:45 PM
-// Version:			1.00
+// Last Edit:		3/31/2022, 10:15 PM
+// Version:			1.01
 // Special Thanks:  Hazelnut, Ralzar, Ninelan, BadLuckBurt, Pango
 // Modifier:			
 
@@ -641,6 +641,7 @@ namespace JewelryAdditions
             try
             {
                 ConsoleCommandsDatabase.RegisterCommand(AddJAItems.command, AddJAItems.description, AddJAItems.usage, AddJAItems.Execute);
+                ConsoleCommandsDatabase.RegisterCommand(ListRegions.command, ListRegions.description, ListRegions.usage, ListRegions.Execute);
             }
             catch (Exception e)
             {
@@ -677,6 +678,27 @@ namespace JewelryAdditions
                 }
 
                 return "Jewelry Items added";
+            }
+        }
+
+        private static class ListRegions
+        {
+            public static readonly string command = "listallregions";
+            public static readonly string description = "Lists all regions.)";
+            public static readonly string usage = "listallregions";
+
+            public static string Execute(params string[] args)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                PlayerEntity playerEntity = player.GetComponent<DaggerfallEntityBehaviour>().Entity as PlayerEntity;
+
+                for (int i = 0; i < 80; i++)
+                {
+                    DFRegion regionInfo = DaggerfallUnity.Instance.ContentReader.MapFileReader.GetRegion(i);
+                    Debug.LogFormat("Region Index # {0} named: {1}", i, regionInfo.Name);
+                }
+
+                return "All regions listed.";
             }
         }
     }

@@ -1,9 +1,9 @@
 {
     "ModTitle": "JewelryAdditions",
-    "ModVersion": "1.00",
+    "ModVersion": "1.01",
     "ModAuthor": "Kirk.O",
     "ContactInfo": "kirkoliveri@gmail.com",
-    "DFUnity_Version": "0.13.4",
+    "DFUnity_Version": "0.13.5",
     "ModDescription": "Adds Various New Pieces Of Gems, Jewelry, and Accessories To Daggerfall",
     "GUID": "93883f8a-9aaf-4938-8fb9-351bcbe58bdc",
     "Files": [
