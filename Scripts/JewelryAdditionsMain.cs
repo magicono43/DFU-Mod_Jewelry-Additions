@@ -277,21 +277,21 @@ namespace JewelryAdditions
                                 case (int)ClassCareers.Sorcerer:
                                 case (int)ClassCareers.Healer:
                                     allowedJewelry = new int[] {0, 0, 1, 1, 4700, 4700, 4701, 4701, 4701, 4702, 4702, 4703, 4703, 4704, 4706, 4706, 4707, 4707};
-                                    jewelryAmount = PickOneOf(1, 1, 1, 1, 1, 1, 2, 2, 2, 3);
+                                    jewelryAmount = PickOneOf(0, 1, 1, 1, 1, 1, 2, 2, 2, 3);
                                     break;
                                 case (int)ClassCareers.Nightblade:
                                 case (int)ClassCareers.Bard:
                                 case (int)ClassCareers.Acrobat:
                                 case (int)ClassCareers.Assassin:
                                     allowedJewelry = new int[] { 0, 0, 1, 1, 4700, 4700, 4701, 4701, 4701, 4702, 4702, 4703, 4703, 4706, 4706, 4707, 4707 };
-                                    jewelryAmount = PickOneOf(1, 1, 2, 2, 3);
+                                    jewelryAmount = PickOneOf(0, 1, 2, 2, 3);
                                     dropOddsMod = 1.5f;
                                     break;
                                 case (int)ClassCareers.Burglar:
                                 case (int)ClassCareers.Rogue:
                                 case (int)ClassCareers.Thief:
                                     allowedJewelry = new int[] { 0, 0, 1, 1, 1, 4700, 4700, 4701, 4701, 4702, 4702, 4703, 4703, 4704, 4705, 4706, 4706, 4707, 4707 };
-                                    jewelryAmount = PickOneOf(2, 2, 2, 2, 3, 3, 3, 3, 3, 4);
+                                    jewelryAmount = PickOneOf(1, 2, 2, 2, 3, 3, 3, 3, 3, 4);
                                     dropOddsMod = 2f;
                                     break;
                                 case (int)ClassCareers.Monk:
@@ -301,7 +301,7 @@ namespace JewelryAdditions
                                 case (int)ClassCareers.Warrior:
                                 case (int)ClassCareers.Knight:
                                     allowedJewelry = new int[] { 0, 0, 1, 4700, 4700, 4701, 4701, 4701, 4702, 4702, 4703, 4703, 4706, 4706, 4707, 4707 };
-                                    jewelryAmount = PickOneOf(1, 1, 1, 1, 2);
+                                    jewelryAmount = PickOneOf(0, 1, 1, 1, 2);
                                     break;
                                 default:
                                     return;
@@ -334,29 +334,29 @@ namespace JewelryAdditions
                                     break;
                                 case (int)MonsterCareers.DaedraLord:
                                     allowedJewelry = new int[] { 1, 1, 4700, 4700, 4701, 4701, 4702, 4702, 4703, 4703, 4705, 4706, 4707 };
-                                    jewelryAmount = PickOneOf(1, 1, 2, 2, 2, 2, 2, 3);
+                                    jewelryAmount = PickOneOf(0, 1, 2, 2, 2, 2, 2, 3);
                                     dropOddsMod = 1.75f;
                                     break;
                                 case (int)MonsterCareers.DaedraSeducer:
                                     allowedJewelry = new int[] { 1, 1, 4700, 4700, 4701, 4701, 4702, 4702, 4703, 4703, 4704, 4706, 4706, 4707, 4707 };
-                                    jewelryAmount = PickOneOf(2, 2, 3, 3, 3, 3, 3, 4);
+                                    jewelryAmount = PickOneOf(1, 2, 3, 3, 3, 3, 3, 4);
                                     dropOddsMod = 2f;
                                     break;
                                 case (int)MonsterCareers.Lamia:
                                     allowedJewelry = new int[] { 4700, 4700, 4701, 4701, 4702, 4702, 4703, 4703, 4704, 4706, 4706, 4707, 4707, 4707 };
-                                    jewelryAmount = PickOneOf(1, 1, 2, 2, 2, 3);
+                                    jewelryAmount = PickOneOf(0, 1, 2, 2, 2, 3);
                                     dropOddsMod = 1.5f;
                                     break;
                                 case (int)MonsterCareers.Mummy:
                                     allowedJewelry = new int[] { 0, 0, 0, 4700, 4700, 4700, 4701, 4701, 4701, 4702, 4702, 4703, 4706, 4707 };
-                                    jewelryAmount = PickOneOf(1, 1, 2, 2, 2, 3);
+                                    jewelryAmount = PickOneOf(0, 1, 2, 2, 2, 3);
                                     dropOddsMod = 1.5f;
                                     silverAverse = true;
                                     break;
                                 case (int)MonsterCareers.Vampire:
                                 case (int)MonsterCareers.VampireAncient:
                                     allowedJewelry = new int[] { 0, 0, 1, 1, 1, 4700, 4700, 4700, 4701, 4701, 4702, 4702, 4702, 4703, 4704, 4706, 4707 };
-                                    jewelryAmount = PickOneOf(1, 2, 2);
+                                    jewelryAmount = PickOneOf(0, 1, 2, 2);
                                     dropOddsMod = 1.5f;
                                     silverAverse = true;
                                     break;

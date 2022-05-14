@@ -1,6 +1,6 @@
 {
     "ModTitle": "JewelryAdditions",
-    "ModVersion": "1.01",
+    "ModVersion": "1.02",
     "ModAuthor": "Kirk.O",
     "ContactInfo": "kirkoliveri@gmail.com",
     "DFUnity_Version": "0.13.5",
@@ -557,16 +557,5 @@
         "Assets/Game/Mods/DFU-Mod_Jewelry-Additions/Textures/tiara/4704_35-0.xml",
         "Assets/Game/Mods/DFU-Mod_Jewelry-Additions/Textures/tiara/4704_2-0.xml"
     ],
-    "Dependencies": [
-        {
-            "Name": "roleplayrealism",
-            "IsOptional": true,
-            "IsPeer": false
-        },
-        {
-            "Name": "unleveled training",
-            "IsOptional": true,
-            "IsPeer": false
-        }
-    ]
+    "Dependencies": []
 }
